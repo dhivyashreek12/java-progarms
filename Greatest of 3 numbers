@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class GreatestOfThree {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Read inputs
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        // Find the maximum
+        int max = Math.max(a, Math.max(b, c));
+
+        // Count how many numbers are equal to max
+        int count = 0;
+        if (a == max) count++;
+        if (b == max) count++;
+        if (c == max) count++;
+
+        // Print result
+        if (count > 1) {
+            System.out.println("There is a tie for the greatest number");
+        } else {
+            System.out.println(max + " is the greatest");
+        }
+
+        sc.close();
+    }
+}
